@@ -151,8 +151,6 @@ var newArray = [];
 var click = false;
 var min;
 var max;
-var messageMin = "Inserisci il numero corrispondente al primo elemento dell'array da comprendere nel nuovo array";
-var messageMax = "Inserisci il numero corrispondente all'ultimo elemento dell'array da comprendere nel nuovo array";
 var arrayList = document.getElementById("array-list");
 var newArrayList = document.getElementById("new-array-list");
 var calculator = document.getElementById("calculator");
@@ -171,6 +169,9 @@ calculator.addEventListener("click", function(){
     if (!click) {
 
         // Chiedi all'utente i due estremi che serviranno per il nuovo array
+        var messageMin = "Inserisci il numero corrispondente al primo elemento dell'array da comprendere nel nuovo array";
+        var messageMax = "Inserisci il numero corrispondente all'ultimo elemento dell'array da comprendere nel nuovo array";
+        
         do {
             min = parseInt(prompt(messageMin));
             if (isNaN(min) || min.length == 0 || min < 1 || min > array.length) {
