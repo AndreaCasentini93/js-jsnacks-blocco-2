@@ -82,3 +82,7 @@ button:hover {
 #snack-3 div:last-child {
     margin: auto 100px;
 }
+#snack-3 ul {
+    list-style: none;
+    text-align: center;
+}
