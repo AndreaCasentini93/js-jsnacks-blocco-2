@@ -159,6 +159,7 @@ var calculator = document.getElementById("calculator");
 var reset = document.getElementById("reset");
 //---------------------/VARIABILI----------------------------
 
+// Stampa la lista presente nell'array di partenza
 for (var j = 0; j < array.length; j++) {
     arrayList.innerHTML += "<li>" + array[j] + "</li>";
 }
