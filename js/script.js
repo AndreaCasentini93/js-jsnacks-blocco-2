@@ -11,7 +11,6 @@ La funzione restituirà un nuovo array con i valori che hanno la posizione compr
 */
 
 //======================SNACK 1==============================
-
 //-----------------------ARRAY-------------------------------
 var bicycles = [
     {
@@ -58,28 +57,76 @@ for (var i = 0; i < bicycles.length; i++) {
 }
 
 // Stampa su HTML la bicicletta con il peso minore
-lessWeightBike.innerHTML = "La bici dal nome " + lightBike.name + " pesa " + lightBike.weight + " ed è la più leggera."
-
+lessWeightBike.innerHTML = "La bici dal nome " + lightBike.name + " pesa " + lightBike.weight + " ed è la più leggera.";
 //=====================/SNACK 1==============================
 
 
 
+
 //======================SNACK 2==============================
+//-----------------------FUNZIONI----------------------------
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+//-----------------------/FUNZIONI---------------------------
 
 //-----------------------ARRAY-------------------------------
-
+var footballTeams = [
+    {
+       name: "Inter",
+       points: 0,
+       fouls: 0
+    },
+    {
+       name: "Milan",
+       points: 0,
+       fouls: 0
+    },
+    {
+       name: "Juventus",
+       points: 0,
+       fouls: 0
+    },
+    {
+       name: "Lazio",
+       points: 0,
+       fouls: 0
+    },
+    {
+       name: "Roma",
+       points: 0,
+       fouls: 0
+    },
+    {
+       name: "Napoli",
+       points: 0,
+       fouls: 0
+    },
+];
+var statisticsFootballTeams = [];
 //----------------------/ARRAY-------------------------------
 
-//-----------------------OGGETTI-----------------------------
-
-//----------------------/OGGETTI-----------------------------
-
 //----------------------VARIABILI----------------------------
-
+var footballTeamsList = document.getElementById("football-teams-list");
 //---------------------/VARIABILI----------------------------
 
+for (i = 0; i < footballTeams.length; i++) {
 
+    // Genera numeri random al posto degli 0 nelle proprietà: punti fatti e falli subiti
+    footballTeams[i].points = randomNumber(0, 100);
+    footballTeams[i].fouls = randomNumber(0, 100);
+
+    // Genera un nuovo array i cui elementi contengono solo nomi e falli subiti
+    var statistics = {};
+    statistics.name = footballTeams[i].name;
+    statistics.fouls = footballTeams[i].fouls;
+    statisticsFootballTeams.push(statistics)
+
+    // Stampa il nuovo array i cui elementi contengono solo nomi e falli subiti
+    footballTeamsList.innerHTML += "<li>Nome squadra = " + statisticsFootballTeams[i].name + "<br>Falli commessi = " + statisticsFootballTeams[i].fouls + "</li>";
+}
 //=====================/SNACK 2==============================
+
 
 
 
