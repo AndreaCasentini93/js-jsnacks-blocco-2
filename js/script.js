@@ -49,6 +49,8 @@ lessWeightBike.innerHTML = "La bici dal nome " + lightBike.name + " pesa " + lig
 //=====================/SNACK 1==============================
 
 
+
+
 //======================SNACK 2==============================
 //-----------------------FUNZIONI----------------------------
 function randomNumber(min, max) {
@@ -109,9 +111,11 @@ for (i = 0; i < footballTeams.length; i++) {
     statisticsFootballTeams.push(statistics)
 
     // Stampa il nuovo array i cui elementi contengono solo nomi e falli subiti
-    footballTeamsList.innerHTML += "<li>Nome squadra = " + statisticsFootballTeams[i].name + "<br>Falli commessi = " + statisticsFootballTeams[i].fouls + "</li>";
+    footballTeamsList.innerHTML += "<li>Squadra = <span id=\"value\">" + statisticsFootballTeams[i].name + "</span><br>Falli commessi = <span id=\"value\">" + statisticsFootballTeams[i].fouls + "</span></li>";
 }
 //=====================/SNACK 2==============================
+
+
 
 
 //======================SNACK 3==============================
@@ -129,16 +133,16 @@ function valuesIncludedInTheArrayRange(arr, a, b) {
 
 //-----------------------ARRAY-------------------------------
 var array = [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "H",
-    "I",
-    "J"
+    "Alessio",
+    "Simone",
+    "Francesco",
+    "Jacopo",
+    "Alberto",
+    "Federica",
+    "Giulia",
+    "Silvia",
+    "Elisa",
+    "Chiara"
 ]
 var newArray = [];
 //----------------------/ARRAY-------------------------------

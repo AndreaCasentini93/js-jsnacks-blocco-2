@@ -1,3 +1,4 @@
+/* COMMONS */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -20,24 +21,24 @@ h2 {
     text-align: center;
     margin-top: 40px;
     margin-bottom: 30px;
-    font-size: 30px;
+    font-size: 25px;
     color: #A9C765;
 }
 p {
-    font-size: 20px;
+    font-size: 18px;
 }
 li {
-    margin: 20px 0;
+    margin: 18px 0;
     font-size: 20px;
 }
 
 button {
-    padding: 5px 20px;
+    padding: 10px 20px;
     border-radius: 10px;
     border: unset;
-    margin: 0px 10px;
+    margin: 5px 10px;
     font-family: 'Comfortaa', cursive;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: #ffffff;
     text-shadow: 0px 0px 2px #000000;
@@ -66,7 +67,9 @@ button:hover {
 }
 
 /* SNACK 2 */
-
+#snack-2 #value {
+    color: #A9C765;
+}
 
 /* SNACK 3 */
 #snack-3 {
