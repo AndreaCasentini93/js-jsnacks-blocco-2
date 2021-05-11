@@ -151,8 +151,8 @@ var newArray = [];
 var click = false;
 var min;
 var max;
-var messageMin = "Inserisci il numero corrispondente al primo elemento da comprendere nel nuovo Array";
-var messageMax = "Inserisci il numero corrispondente all'ultimo elemento da comprendere nel nuovo Array";
+var messageMin = "Inserisci il numero corrispondente al primo elemento dell'array da comprendere nel nuovo array";
+var messageMax = "Inserisci il numero corrispondente all'ultimo elemento dell'array da comprendere nel nuovo array";
 var arrayList = document.getElementById("array-list");
 var newArrayList = document.getElementById("new-array-list");
 var calculator = document.getElementById("calculator");
@@ -173,16 +173,16 @@ calculator.addEventListener("click", function(){
         // Chiedi all'utente i due estremi che serviranno per il nuovo array
         do {
             min = parseInt(prompt(messageMin));
-            if (isNaN(min) || min.length == 0) {
-                messageMin = "Errore! Inserisci il numero corrispondente al primo elemento da comprendere nel nuovo Array"
+            if (isNaN(min) || min.length == 0 || min < 1 || min > array.length) {
+                messageMin = "Errore! Inserisci il numero corrispondente al primo elemento dell'array da comprendere nel nuovo array"
             }
-        } while (isNaN(min) || min.length == 0)
+        } while (isNaN(min) || min.length == 0 || min < 1 || min > array.length)
         do {
             max = parseInt(prompt(messageMax));
-            if (isNaN(max) || max.length == 0) {
-                messageMax = "Errore! Inserisci il numero corrispondente all'ultimo elemento da comprendere nel nuovo Array"
+            if (isNaN(max) || max.length == 0 || max < min || max > array.length) {
+                messageMax = "Errore! Inserisci il numero corrispondente all'ultimo elemento dell'array da comprendere nel nuovo array"
             }
-        } while (isNaN(max) || min.length == 0)
+        } while (isNaN(max) || min.length == 0 || max < min || max > array.length)
 
         // Genera il nuovo array utilizzando la funzione creata
         newArray = valuesIncludedInTheArrayRange(array, min, max)
